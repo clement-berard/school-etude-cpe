@@ -1,0 +1,3 @@
+exo 1 - 1
+
+	le document n'est pas valide, le type de HTML n'est pas déclaré

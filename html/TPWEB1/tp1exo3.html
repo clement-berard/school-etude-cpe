@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Title of the document</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <form method="GET" action="http://example.com">
+
+            <table>
+                <tr>
+                    <td>Nom : <input type="text" name="nom"/></td>
+                </tr>
+                <tr>
+                    <td>Prénom : <input type="text" name="prenom" /></td>
+                </tr>
+                <tr>
+                    <td>Adresse : <input type="text" name="adresse" /></td>
+                </tr>
+                <tr>
+                    <td>Code postal : <input type="text" name="cp" /></td>
+                </tr>
+                <tr>
+                    <td>Ville : <input type="text" name="ville" /></td>
+                </tr>
+                <tr>
+                    <td>Téléphone : <input type="text" name="tel"/></td>
+                </tr>
+                <tr>
+                    <td>Profession : <select name="profession"><option value="webm">Webdesignner</option><option value="prof">Prof</option></select></td>
+                </tr>
+                <tr>
+                    <td>Niveau d'étude : </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="etude" value="1" />1<br /><input type="radio" name="etude" value="2" />2<br /><input type="radio" name="etude" value="3" />3<br /></td>
+                </tr>
+                <tr>
+                    <td>Cocher cette case pour autoriser le transfert de vos coordonnées : <input type="checkbox" name="coor-accept" /></td>
+                </tr>
+                <tr>
+                    <td>Compétenses : </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <input type="checkbox" name="competence_son" />Son
+                        <input type="checkbox" name="competence_informatique" />Informatique
+                        <input type="checkbox" name="competence_video" />Vidéo
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" /></td>
+                </tr>
+            </table>
+            <!-- retour du formulaire :
+            http://example.com/?nom=clem&prenom=bera&adresse=niofen&cp=667&ville=kdkdk&tel=jdkd&profession=webm&etude=1&coor-accept=on&competence_son=on&competence_informatique=on -->
+        </form>
+    </body>
+</html>

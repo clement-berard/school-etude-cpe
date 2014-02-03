@@ -1,0 +1,19 @@
+.titre {
+    border: 3px solid black;
+    text-align: center;
+}
+.heure {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.last {
+    border-right: 1px solid black;
+}
+.date_jour {
+    background-color: #fffe93;
+}
+.ski_cpe {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
