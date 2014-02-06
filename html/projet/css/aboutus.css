@@ -1,0 +1,40 @@
+/*
+CSS réservé pour la page aboutus
+*/
+/*
+    Created on : 5 févr. 2014, 11:11:55
+    Author     : cberard
+*/
+
+#content-aboutus{}
+#content-aboutus .item{
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    width:80%;
+    margin-bottom: 20px;
+    padding : 7px 7px 7px 100px;
+
+}
+div#content div#content-aboutus div.item.aboutus{
+    background: url(../images/aboutus.png) left center no-repeat;
+}
+div#content div#content-aboutus div.item.sponsors{
+    background: url(../images/aboutus.png) left center no-repeat;
+}
+div#content div#content-aboutus div.item.contact{
+    background: url(../images/aboutus.png) left center no-repeat;
+    position: relative;
+        overflow: hidden;
+    clear: both;
+}
+
+div#content div#content-aboutus div.item.contact p{
+    float: left;
+    width: 65%;
+
+}
+
+div#content div#content-aboutus div.item.contact div.map-google{
+    float: right;
+}
+
