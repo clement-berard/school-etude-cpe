@@ -18,8 +18,13 @@ class parents {
         return $this->db->select($this->useTable, "*");
     }
 
-    public function select($columns = '*', $where = null){
-        return $this->db->select($this->useTable, $columns,$where);
+    public function select($columns = '*', $where = null) {
+        return $this->db->select($this->useTable, $columns, $where);
+    }
+
+    public function onlyItemsWithLimitOf($i = null) {
+        $a = $this->db->select($this->useTable, 'title', ["LIMIT" => $i] );
+        return $a;
     }
 
 }
