@@ -8,7 +8,6 @@ class products extends parents {
     private $description;
     private $price;
     private $number;
-
     private $useTable = "productlist";
 
     function __construct() {
@@ -63,6 +62,10 @@ class products extends parents {
         $this->number = $number;
     }
 
+    public function onlyItemsWithLimitOf($i = null) {
+        $a = $this->db->select($this->useTable, ['id','title','imgbase64','description'], ["LIMIT" => $i]);
+        return $a;
+    }
 
 }
 

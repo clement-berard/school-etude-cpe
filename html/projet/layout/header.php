@@ -5,7 +5,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>Andia - Responsive Agency Template</title>
+        <title>RobotWithMe - All stuff you need !!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -32,6 +32,18 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.flexslider.js"></script>
+        <script src="assets/js/jquery.tweet.js"></script>
+        <script src="assets/js/jflickrfeed.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="assets/js/jquery.ui.map.min.js"></script>
+        <script src="assets/js/jquery.quicksand.js"></script>
+        <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="scripts/jquery.validate.min.js"></script>
     </head>
 
     <!-- Header -->
@@ -54,13 +66,16 @@
                                     <a href="index.php"><i class="icon-home"></i><br />Accueil</a>
                                 </li>
                                 <li>
-                                    <a href="products.php"><i class="icon-camera"></i><br />Produits</a>
+                                    <a href="products.php"><i class="icon-align-justify"></i><br />Produits</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="icon-comments"></i><br />Inscription</a>
+                                    <a href="inscription.php"><i class="icon-comments"></i><br />Inscription</a>
                                 </li>
                                 <li>
-                                    <a href="services.html"><i class="icon-tasks"></i><br />Panier</a>
+                                    <a href="login.php"><i class="icon-user"></i><br />Connexion</a>
+                                </li>
+                                <li>
+                                    <a href="services.html"><i class="icon-shopping-cart"></i><br />Panier</a>
                                 </li>
                             </ul>
                         </div>
@@ -69,7 +84,4 @@
             </div>
         </div>
     </div>
-
-    <?php
-    
-    ?>
+    <body>
