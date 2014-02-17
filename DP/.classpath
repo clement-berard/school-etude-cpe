@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="DP FichiersPourExemples/CalculetteMVC-SiteZero"/>
+	<classpathentry kind="src" path="DP FichiersPourExemples/Composite"/>
+	<classpathentry kind="src" path="DP FichiersPourExemples/Iterator"/>
+	<classpathentry kind="src" path="DP FichiersPourExemples/PizzaFactoryDecorator"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
