@@ -22,6 +22,10 @@ class parents {
         return $this->db->select($this->useTable, $columns, $where);
     }
 
+    public function exist($id){
+        return  $this->db->count($this->useTable, ["id" => $id]) != 0;
+    }
+
 
 
 }

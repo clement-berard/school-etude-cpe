@@ -6,8 +6,8 @@
         <div class="row">
             <div class="span12">
                 <i class="icon-envelope-alt page-title-icon"></i>
-                <h2>Contact Us /</h2>
-                <p>Here is how you can contact us</p>
+                <h2>Inscription /</h2>
+                <p>Créer votre compte RobotWithMe</p>
             </div>
         </div>
     </div>
@@ -18,17 +18,17 @@
     <div class="row">
         <div class="contact-form span7">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <a href="">suscipit lobortis</a> nisl ut aliquip ex ea commodo consequat.</p>
+            <p>En créant un compte sur RobotWithMe, vous pourrez mettre des produits dans votre panier et aussi voir les produits ! (eh oui !) Alors c'est partit, remplissez le formulaire ci-dessous !</p>
             <form class="cmxform" id="commentForm" method="get" action="">
                 <fieldset>
                     <legend>Inscription</legend>
                     <p>
-                        <label for="cname">First Name</label>
+                        <label for="cname">Prénom</label>
                         <input id="fname" name="fname" minlength="2" type="text" required/>
                     </p>
 
                     <p>
-                        <label for="curl">Last Name</label>
+                        <label for="curl">Nom</label>
                         <input id="lname" name="lname" minlength="2" type="text" required/>
                     </p>
                     <p>
@@ -117,17 +117,17 @@
                         <input id="cemail" type="email" name="email" required/>
                     </p>
                     <p>
-                        <input class="submit" type="submit" value="Submit" />
+                        <input class="submit" type="submit" value="C'est parti !" />
                     </p>
                 </fieldset>
             </form>
         </div>
         <div class="contact-address span5">
-            <h4>We Are Here</h4>
+            <h4>Où nous trouver ?</h4>
             <div class="map"></div>
-            <h4>Address</h4>
-            <p>Via Principe Amedeo 9 <br> 10100, Torino, TO, Italy</p>
-            <p>Phone: 0039 333 12 68 347</p>
+            <h4>Adresse</h4>
+            <p>Boulevard du Robot <br> 10101, iRobot, R2D2, Pandora</p>
+            <p>Tél: 0039 333 12 68 347</p>
         </div>
     </div>
 </div>

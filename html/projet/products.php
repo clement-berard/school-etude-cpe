@@ -11,12 +11,12 @@ $lesproduitspromo = $model_product->getAll();
         <?php foreach ($lesproduitspromo as $k => $v): ?>
 
             <div class="work span3">
-                <img src="data:image/gif;base64,<?php echo $v['imgbase64'] ?>" alt="">
+                <img src="data:image/gif;base64,<?php echo $v['imgbase64'] ?>" alt="" style="height: 237px">
                 <h4><?php echo $v['title'] ?></h4>
                 <p><?php echo $v['description'] ?></p>
                 <div class="icon-awesome">
-                    <a href="assets/img/portfolio/work1.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
-                    <a href="portfolio.html"><i class="icon-link"></i></a>
+                    <a href="product_detail.php?id=<?php echo $v['id'] ?>" class="link_with_tooltip" title="Voir la fiche du produit <?php echo $v['title']   ?>"><i class="icon-tag"></i></a>
+                    <a href="#" class="link_with_tooltip add_to_cart" rel="<?php echo $v['id'] ?>" title="Ajouter le produit <?php echo $v['title']   ?> au panier"><i class="icon-shopping-cart"></i></a>
                 </div>
             </div>
 
@@ -28,4 +28,11 @@ $lesproduitspromo = $model_product->getAll();
 
 
 </div>
+
+<script type="text/javascript">
+
+$('.link_with_tooltip').tooltip();
+
+</script>
+
 <?php include_once 'layout/footer.php'; ?>

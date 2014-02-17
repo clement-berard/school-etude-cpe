@@ -72,9 +72,6 @@
                                     <a href="inscription.php"><i class="icon-comments"></i><br />Inscription</a>
                                 </li>
                                 <li>
-                                    <a href="login.php"><i class="icon-user"></i><br />Connexion</a>
-                                </li>
-                                <li>
                                     <a href="services.html"><i class="icon-shopping-cart"></i><br />Panier</a>
                                 </li>
                             </ul>
