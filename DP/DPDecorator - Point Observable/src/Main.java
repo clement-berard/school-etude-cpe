@@ -2,10 +2,17 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		
+		Point p = new Point(18,44);
+		DecorateurPoint deco = new DecorateurPoint(p);
 		
-		Point p = new Point(10, 29);
+		NouvelObs obs = new NouvelObs();
+		deco.addObserver(obs);
+		
+		deco.setX(555);
+
+		
 		
 	}
 

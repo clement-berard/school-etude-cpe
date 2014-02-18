@@ -13,7 +13,7 @@ public class DecorateurPoint extends Observable implements PointGraphique {
 
 	@Override
 	public int getX() {
-		// TODO Auto-generated method stub
+
 		return this.point_g.getX();
 	}
 
