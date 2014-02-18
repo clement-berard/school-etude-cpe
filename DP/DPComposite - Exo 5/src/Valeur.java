@@ -1,15 +1,14 @@
-public class Valeur implements Tag {
+public class Valeur extends Tag {
 
-	@Override
-	public String getTag() {
-		// TODO Auto-generated method stub
-		return null;
+	public Valeur(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public String getValeur() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getTag() {
+		System.out.println("C'est un fichier :  " + this.name);
+		return this.name;
 	}
 
 }

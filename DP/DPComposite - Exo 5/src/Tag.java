@@ -1,7 +1,13 @@
-public interface Tag {
+public abstract class Tag {
 
-	public String getTag();
+	public String name;
 
-	public String getValeur();
+	public Tag(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public abstract String getTag();
+
 
 }
