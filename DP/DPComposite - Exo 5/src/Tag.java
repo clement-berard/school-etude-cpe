@@ -9,5 +9,10 @@ public abstract class Tag {
 	
 	public abstract String getTag();
 
+	@Override
+	public String toString() {
+		return "Tag [name=" + name + "]";
+	}
+
 
 }
