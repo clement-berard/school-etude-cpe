@@ -5,7 +5,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		
-		
+		Point p = new Point(10, 29);
 		
 	}
 
