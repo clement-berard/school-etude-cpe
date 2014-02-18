@@ -72,7 +72,7 @@
                                     <a href="inscription.php"><i class="icon-comments"></i><br />Inscription</a>
                                 </li>
                                 <li>
-                                    <a href="services.html"><i class="icon-shopping-cart"></i><br />Panier</a>
+                                    <a href="cart.php"><i class="icon-shopping-cart"></i><br />Panier</a>
                                 </li>
                             </ul>
                         </div>
