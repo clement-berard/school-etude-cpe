@@ -1,14 +1,12 @@
 <?php include_once 'includes/all.include.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-
         <meta charset="utf-8">
-        <title>RobotWithMe - All stuff you need !!</title>
+        <title>RobotWithMe - All robots you need !!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="Best robots in the world !">
+        <meta name="author" content="BERARDFERREIRA">
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
@@ -20,15 +18,12 @@
         <link rel="stylesheet" href="assets/css/font-awesome.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/myStyle.css">
-
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-
-        <!-- Favicon and touch icons -->
+        <!-- Favicon -->
         <link rel="shortcut icon" href="assets/ico/favicon.ico">
-
         <!-- Javascript -->
         <script src="assets/js/jquery-1.8.2.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
