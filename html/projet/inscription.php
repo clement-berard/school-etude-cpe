@@ -5,7 +5,6 @@
 <?php
 // traitement de la requete post
 $aDuPost = !empty($_POST);
-
 if ($aDuPost) {
     $mes_donnees = $_POST;
     $model_user = new users();
