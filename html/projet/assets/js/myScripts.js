@@ -1,19 +1,43 @@
 
-/**
- * fonction qui ne sert a rien, juste a dire que
- * nous ne sommes pas sur les réseaux sociaux
- */
+
 jQuery(document).ready(function() {
+    /**
+     * fonction qui ne sert a rien, juste a dire que
+     * nous ne sommes pas sur les réseaux sociaux
+     */
     $('.social_link').click(function() {
         alert('Nous ne sommes pas sur ' + $(this).attr('rel'));
         return false;
     });
-});
-
-/**
- * fonction d'ajour (ajax) des produits dans le panier
- */
-jQuery(document).ready(function() {
+    /**
+     * petit tooltip sur la page product
+     *
+     */
+    $('.link_with_tooltip').tooltip();
+    /**
+     * pour valider le formulaire d'ajout de user
+     *
+     */
+    $("#formulaire_enregistrement").validate({
+        rules: {
+            "fname": {
+                "required": true,
+                "minlength": 2,
+                "maxlength": 60000
+            },
+            "lname": {
+                "required": true,
+                "maxlength": 255
+            },
+            "comment": {
+                "required": true
+            }
+        }
+    });
+    /**
+     * fonction d'ajour (ajax) des produits dans le panie
+     *
+     */
     $('.add_to_cart').click(function() {
         $.ajax({
             type: "POST", // envois des données en POST
@@ -30,4 +54,5 @@ jQuery(document).ready(function() {
                     $('#result_add_to_cart').html(data);
                 });
     });
+
 });

@@ -1,5 +1,24 @@
 <?php include_once 'layout/header.php'; ?>
 
+
+
+<?php
+// traitement de la requete post
+$aDuPost = !empty($_POST);
+
+if ($aDuPost) {
+    $mes_donnees = $_POST;
+    $model_user = new users();
+    $good = $model_user->add($mes_donnees);
+
+    if($good){
+        echo '<div class="alert alert-success">Votre inscription a été faite avec succès !</div>';
+    }
+    else{
+        echo '<div class="alert alert-danger">Une erreur est survenue lors de votre inscription</div>';
+    }
+}
+?>
 <!-- Page Title -->
 <div class="page-title">
     <div class="container">
@@ -16,110 +35,24 @@
 <!-- Contact Us -->
 <div class="contact-us container">
     <div class="row">
-        <div class="contact-form span7">
+        <div class="span7">
 
             <p>En créant un compte sur RobotWithMe, vous pourrez mettre des produits dans votre panier et aussi voir les produits ! (eh oui !) Alors c'est partit, remplissez le formulaire ci-dessous !</p>
-            <form class="cmxform" id="commentForm" method="get" action="">
-                <fieldset>
-                    <legend>Inscription</legend>
-                    <p>
-                        <label for="cname">Prénom</label>
-                        <input id="fname" name="fname" minlength="2" type="text" required/>
-                    </p>
-
-                    <p>
-                        <label for="curl">Nom</label>
-                        <input id="lname" name="lname" minlength="2" type="text" required/>
-                    </p>
-                    <p>
-                        <label for="ccomment">Age</label>
-                        <select id="ccomment" name="comment" required>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59">59</option>
-                            <option value="60">60</option>
-                            <option value="61">61</option>
-                            <option value="62">62</option>
-                            <option value="63">63</option>
-                            <option value="64">64</option>
-                            <option value="65">65</option>
-                            <option value="66">66</option>
-                            <option value="67">67</option>
-                            <option value="68">68</option>
-                            <option value="69">69</option>
-                            <option value="70">70</option>
-                            <option value="71">71</option>
-                            <option value="72">72</option>
-                            <option value="73">73</option>
-                            <option value="74">74</option>
-                            <option value="75">75</option>
-                            <option value="76">76</option>
-                            <option value="77">77</option>
-                            <option value="78">78</option>
-                            <option value="79">79</option>
-                            <option value="80">80</option>
-                            <option value="81">81</option>
-                            <option value="82">82</option>
-                            <option value="83">83</option>
-                            <option value="84">84</option>
-                            <option value="85">85</option>
-                            <option value="86">86</option>
-                            <option value="87">87</option>
-                            <option value="88">88</option>
-                            <option value="89">89</option>
-                            <option value="90">90</option>
-
-                        </select>
-                    </p>
-                    <p>
-                        <label for="cemail">E-Mail</label>
-                        <input id="cemail" type="email" name="email" required/>
-                    </p>
-                    <p>
-                        <input class="submit" type="submit" value="C'est parti !" />
-                    </p>
-                </fieldset>
+            <form id="formulaire_enregistrement" action="inscription.php" method="POST" >
+                <label for="firstname">Prénom</label>
+                <input id="firstname" name="firstname" minlength="2" type="text" required/>
+                <label for="lastname">Nom</label>
+                <input id="lastname" name="lastname" minlength="2" type="text" required/>
+                <label for="age">Age</label>
+                <select id="age" name="age" required>
+                    <?php
+                    for ($i = 16; $i <= 90; $i++)
+                        echo '<option value="' . $i . '">' . $i . '</option>';
+                    ?>
+                </select>
+                <label for="email">E-Mail</label>
+                <input id="email" type="email" name="email" required/>
+                <input type="submit" />
             </form>
         </div>
         <div class="contact-address span5">
@@ -130,28 +63,8 @@
             <p>Tél: 0039 333 12 68 347</p>
         </div>
     </div>
+
+
+
 </div>
-
-<script type="text/javascript">
-
-    $(document).ready(function() {
-        $("#commentForm").validate({
-            rules: {
-                "fname": {
-                    "required": true,
-                    "minlength": 2,
-                    "maxlength": 60000
-                },
-                "lname": {
-                    "required": true,
-                    "maxlength": 255
-                },
-                "comment": {
-                    "required": true
-                }
-            }
-        });
-    });
-</script>
-
 <?php include_once 'layout/footer.php'; ?>
