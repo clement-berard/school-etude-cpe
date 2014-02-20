@@ -14,6 +14,7 @@ jQuery(document).ready(function() {
      *
      */
     $('.link_with_tooltip').tooltip();
+    $('.cart_delete_product').tooltip();
     /**
      * pour valider le formulaire d'ajout de user
      *

@@ -6,13 +6,22 @@ class session {
         session_start();
     }
 
-    public static function add($key, $value) {
+    public function add($key, $value) {
         $_SESSION[$key] = $value;
     }
 
-    public static function get($key) {
+    public function get($key) {
         if (isset($_SESSION[$key]))
             return $_SESSION[$key];
+    }
+
+    public function remove($key) {
+        if (isset($_SESSION[$key]))
+            unset($_SESSION[$key]);
+    }
+
+    public function exist($key) {
+        return isset($_SESSION[$key]);
     }
 
 }
