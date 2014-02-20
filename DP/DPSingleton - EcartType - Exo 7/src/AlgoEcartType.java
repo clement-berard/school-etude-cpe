@@ -1,5 +1,5 @@
 ﻿import java.util.List;
 
 public interface AlgoEcartType {
-    Double ecartType(List<Double> valeurs);
+	Double ecartType(List<Double> valeurs);
 }
