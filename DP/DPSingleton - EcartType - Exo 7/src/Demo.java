@@ -5,7 +5,7 @@
 		ApplicationTest appliTest = new ApplicationTest();
 
 		appli.litDonnees();
-		appli.calculeStatistiques(new AlgoEcartType1());
+		appli.calculeStatistiques(AlgoEcartType1.getInstance());
 		appli.afficheStatistiques();
 
 		appliTest.traiteDonnees();
