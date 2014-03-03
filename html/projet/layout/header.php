@@ -59,13 +59,13 @@
                                     <a href="index.php"><i class="icon-home"></i><br />Accueil</a>
                                 </li>
                                 <li>
-                                    <a href="products.php"><i class="icon-align-justify"></i><br />Produits</a>
+                                    <a href="products"><i class="icon-align-justify"></i><br />Produits</a>
                                 </li>
                                 <li>
-                                    <a href="inscription.php"><i class="icon-comments"></i><br />Inscription</a>
+                                    <a href="inscription"><i class="icon-comments"></i><br />Inscription</a>
                                 </li>
                                 <li>
-                                    <a href="cart.php"><i class="icon-shopping-cart"></i><br />Panier</a>
+                                    <a href="cart"><i class="icon-shopping-cart"></i><br />Panier</a>
                                 </li>
                             </ul>
                         </div>

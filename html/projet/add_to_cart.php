@@ -4,10 +4,10 @@ $model_product = new products();
 // recupération en GET de l'id
 $id = $_POST['id'];
 // si l'id est null ou si il n'existe pas en base, erreur (redirection)
-if (!$id || !$model_product->exist($id))
+if (!$id || !$model_product->exist('id = '.$id))
     header('Location: erreur.php');
 // on recupere le produit dans la base
-$mon_produit = current($model_product->select('*', ["id" => $id]));
+$mon_produit = $model_product->selectById($id);
 // on ajoute au panier
 $cart->add($mon_produit);
 // nombre de produit dans le panier

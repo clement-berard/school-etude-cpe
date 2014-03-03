@@ -8,7 +8,7 @@ $id = $_GET['id'];
 if (!$id || !$model_product->exist($id))
     header('Location: erreur.php');
 // on recupere le produit dans la base
-$mon_produit = current($model_product->select('*', ["id" => $id]));
+$mon_produit = $model_product->selectById($id);
 ?>
 <div class="portfolio portfolio-page container">
     <div class="portfolio-title">

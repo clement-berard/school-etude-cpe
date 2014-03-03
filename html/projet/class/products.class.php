@@ -1,5 +1,8 @@
 <?php
 
+/**
+ *
+ */
 class products extends parents {
 
     private $id;
@@ -9,23 +12,51 @@ class products extends parents {
     private $price;
     private $number;
     private $useTable = "productlist";
+    protected $allFields = 'id,imgbase64,title,description,price,number';
 
+    /**
+     *
+     */
     function __construct() {
         parent::__construct($this->useTable);
     }
 
+    /**
+     *
+     * @param type $id
+     */
+    public function selectById($id = null) {
+        return $this->db->selectById($this->useTable, $this->allFields,$id);
+    }
+
+    /**
+     *
+     * @return type
+     */
     public function getId() {
         return $this->id;
     }
 
+    /**
+     *
+     * @return type
+     */
     public function getImagebase64() {
         return $this->imagebase64;
     }
 
+    /**
+     *
+     * @return type
+     */
     public function getTitle() {
         return $this->title;
     }
 
+    /**
+     *
+     * @return type
+     */
     public function getDescription() {
         return $this->description;
     }
@@ -58,13 +89,12 @@ class products extends parents {
         $this->price = $price;
     }
 
+    /**
+     *
+     * @param type $number
+     */
     public function setNumber($number) {
         $this->number = $number;
-    }
-
-    public function onlyItemsWithLimitOf($i = null) {
-        $a = $this->db->select($this->useTable, ['id','title','imgbase64','description'], ["LIMIT" => $i]);
-        return $a;
     }
 
 }

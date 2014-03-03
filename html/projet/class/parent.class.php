@@ -6,7 +6,7 @@ class parents {
     private $useTable;
 
     function __construct($useTable) {
-        $this->db = new medoo('projet_cpe');
+        $this->db = new bdd();
         $this->useTable = $useTable;
     }
 
@@ -22,13 +22,15 @@ class parents {
         return $this->db->select($this->useTable, $columns, $where);
     }
 
-    public function exist($id) {
-        return $this->db->count($this->useTable, ["id" => $id]) != 0;
+    public function exist($where = null) {
+        return $this->db->count($this->useTable, $where) != 0;
     }
 
     public function add($data) {
         return $this->db->insert($this->useTable, $data);
     }
+
+ 
 
 }
 
