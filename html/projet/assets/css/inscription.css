@@ -1,0 +1,33 @@
+#page_inscription{
+
+}
+
+#page_inscription > #form{
+	width:60%;
+	float: left;
+	padding: 9px;
+	
+}
+
+#page_inscription > #form p{
+
+margin-bottom: 15px;
+
+}
+
+#page_inscription > #form input,#page_inscription > #form label{
+	
+	display:block;
+}
+#page_inscription > #form input[type=submit]{
+float: right;
+
+}
+
+#page_inscription > #adresse{
+	width:35%;
+	float: right;
+	border: 1px solid #ccc;
+	min-height: 250px;
+	padding: 10px;
+}

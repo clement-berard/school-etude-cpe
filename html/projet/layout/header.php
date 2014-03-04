@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/css/images/favicon.ico" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/products.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/inscription.css" type="text/css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
     
     <script src="assets/js/jquery-1.8.0.min.js" type="text/javascript"></script>
@@ -35,57 +36,3 @@
                 <div class="cl">&nbsp;</div>
             </nav>
             </header>
-            <!-- end of header -->
-            <!-- navigaation -->
-           
-            <!-- end of navigation -->
-            <!-- slider-holder -->
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

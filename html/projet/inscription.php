@@ -18,23 +18,10 @@ if ($aDuPost) {
     }
 }
 ?>
-<!-- Page Title -->
-<div class="page-title">
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                <i class="icon-envelope-alt page-title-icon"></i>
-                <h2>Inscription /</h2>
-                <p>Créer votre compte RobotWithMe</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Contact Us -->
-<div class="contact-us container">
-    <div class="row">
-        <div class="span7">
+<div class="main">
+    <div id="page_inscription">
+    <h3>Créer votre compte RobotWithMe</h3>
+        <div id="form">
 
             <p>En créant un compte sur RobotWithMe, vous pourrez mettre des produits dans votre panier et aussi voir les produits ! (eh oui !) Alors c'est partit, remplissez le formulaire ci-dessous !</p>
             <form id="formulaire_enregistrement" action="inscription.php" method="POST" >
@@ -42,6 +29,7 @@ if ($aDuPost) {
                 <input id="firstname" name="firstname" minlength="2" type="text" required/>
                 <label for="lastname">Nom</label>
                 <input id="lastname" name="lastname" minlength="2" type="text" required/>
+             
                 <label for="age">Age</label>
                 <select id="age" name="age" required>
                     <?php
@@ -54,9 +42,8 @@ if ($aDuPost) {
                 <input type="submit" />
             </form>
         </div>
-        <div class="contact-address span5">
+        <div id="adresse">
             <h4>Où nous trouver ?</h4>
-            <div class="map"></div>
             <h4>Adresse</h4>
             <p>Boulevard du Robot <br> 10101, iRobot, R2D2, Pandora</p>
             <p>Tél: 0039 333 12 68 347</p>
