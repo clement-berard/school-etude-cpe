@@ -1,0 +1,30 @@
+#page_products .item_product{
+width: 100%;
+margin-bottom: 70px;
+}
+
+#page_products > .item_product > .image img{
+    width:220px;
+}
+
+#page_products > .item_product > .image{
+   width: 25%; float: left;
+}
+
+#page_products > .item_product > .infos{
+   margin-left: 25%; width: 75%;
+}
+
+#page_products > .item_product > .infos a{
+   border-bottom: 1px dotted #FFF;
+}
+
+#page_products > .item_product > .infos .page_product_price{
+   float: right;
+   font-size: 16px;
+   color: #000;
+}
+
+#page_products > .item_product > .infos a:hover{
+   border-bottom: 1px dotted #000;
+}
