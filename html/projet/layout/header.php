@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/inscription.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/notifications.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/cart.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/singleproduct.css" type="text/css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
     
     <script src="assets/js/jquery-1.8.0.min.js" type="text/javascript"></script>

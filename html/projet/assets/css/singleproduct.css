@@ -1,0 +1,40 @@
+/*
+Feuille de style pour la page de visu d'un produit
+*/
+/* 
+    Created on : 10 mars 2014, 11:32:53
+    Author     : Clément BERARD
+*/
+
+
+#page_product_detail{
+
+}
+
+#page_product_detail > h3.price{
+    background: none;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-top: 15px;
+
+}
+
+#page_product_detail > .btn_add_to_cart_singleproduct{
+    background: none;
+    font-size: 12px;
+    float: right;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+#page_product_detail > .btn_add_to_cart_singleproduct:hover{
+    border-color: #000;
+    cursor: pointer;
+}
+
+#page_product_detail > .image{
+    text-align: center;
+    width: 90%;
+}
+
