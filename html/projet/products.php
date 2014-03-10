@@ -1,5 +1,6 @@
 <?php
 include_once 'layout/header.php';
+$page_name = "products";
 $model_product = new products();
 $lesproduitspromo = $model_product->getAll();
 ?>
@@ -19,7 +20,7 @@ $lesproduitspromo = $model_product->getAll();
                     <p class="page_product_price">$<?php echo $v['price'] ?></p>
                     <div class="icon-awesome">
                         <a href="product_detail.php?id=<?php echo $v['id'] ?>" class="link_with_tooltip" title="Voir la fiche du produit <?php echo $v['title'] ?>">Voir la fiche</a> | 
-                        <a href="#" class="link_with_tooltip add_to_cart" rel="<?php echo $v['id'] ?>" title="Ajouter le produit <?php echo $v['title'] ?> au panier">Ajouter au panier</a>
+                        <a href="#" class="add_to_cart" data-idproduct="<?php echo $v['id'] ?>" title="Ajouter le produit <?php echo $v['title'] ?> au panier">Ajouter au panier</a>
                     </div>
                 </div>
         </div>

@@ -1,0 +1,23 @@
+/*
+Feuille de style pour la pastille sur le bouton du panier
+Valide : oui
+*/
+/* 
+    Created on : 10 mars 2014, 09:46:53
+    Author     : Clément BERARD
+*/
+
+#noti_Container {
+    position:relative;     /* This is crucial for the absolutely positioned element */
+}
+.noti_bubble {
+    position:absolute;    /* This breaks the div from the normal HTML document. */
+    top: -10px;
+    right:2px;
+    padding:0 2px 0 2px;
+    background-color:red; /* you could use a background image if you'd like as well */
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+    box-shadow:1px 1px 1px gray;
+}
