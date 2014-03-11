@@ -42,12 +42,6 @@ if ($aDuPost) {
                 <input type="submit" />
             </form>
         </div>
-        <div id="adresse">
-            <h4>Où nous trouver ?</h4>
-            <h4>Adresse</h4>
-            <p>Boulevard du Robot <br> 10101, iRobot, R2D2, Pandora</p>
-            <p>Tél: 0039 333 12 68 347</p>
-        </div>
     </div>
 
 

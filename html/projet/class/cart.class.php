@@ -27,9 +27,28 @@ class cart {
         if (!$this->session->exist("cart")) {
             $this->session->add("cart", array());
         }
+        $estDedans = false;
         if ($item != null) {
             $tps = $this->session->get('cart');
-            array_push($tps, $item);
+            if (!empty($tps)) {
+                foreach ($tps as $key => $value) {
+                    if ($value['id'] == $item['id']) {
+                        $estDedans = true;
+                        $cle = $key;
+                    }
+                }
+                if ($estDedans) {
+                    if (isset($tps[$cle]['nbcart']))
+                        $tps[$cle]['nbcart'] = $tps[$cle]['nbcart'] + 1;
+                    else
+                        $tps[$cle]['nbcart'] = 2;
+                }
+                else {
+                    array_push($tps, $item);
+                }
+            } else {
+                array_push($tps, $item);
+            }
             $this->session->add("cart", $tps);
         }
     }
@@ -55,6 +74,10 @@ class cart {
     public function clearAll() {
         $this->session->remove('cart');
         $this->add();
+    }
+
+    public function get() {
+        return $this->session->get("cart");
     }
 
 }

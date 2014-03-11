@@ -12,7 +12,10 @@ $mon_produit = $model_product->selectById($id);
 // on ajoute au panier
 $cart->add($mon_produit);
 // nombre de produit dans le panier
-$nb_product_in_cart = sizeof($session->get('cart'));
+$nb_product_in_cart = sizeof($cart->get('cart'));
 // on renvoit du texte
-echo "Le produit ".$mon_produit['title']." a bien été ajouté au panier !";
+$return = array();
+$return['message'] = "Le produit ".$mon_produit['title']." a bien été ajouté au panier !";
+$return['nb_product_cart'] = $nb_product_in_cart;
+echo json_encode($return);
 ?>

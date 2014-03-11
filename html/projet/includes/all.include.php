@@ -8,4 +8,6 @@ require_once 'class/session.class.php';
 require_once 'class/cart.class.php';
 $session = new session();
 $cart = new cart($session);
+$nb_product_in_cart_init = sizeof($cart->get());
+//$cart->clearAll();
 ?>

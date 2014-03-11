@@ -1,33 +1,32 @@
 <?php include_once 'layout/header.php'; ?>
 <?php include_once('layout/slider.php'); ?>
 <div class="main">
-				<section class="cols">
-					<div class="col">
-						<h3>About Us</h3>
-						<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui ipsum, cursus ut adipiscing porta, vestibulum quis turpis. Ut ultricies rutrum lorem, in blandit tortor congue pulvinar lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /><a href="#" class="more">view more</a></p>
-					</div>
+    <section class="cols">
+        <div class="col">
+            <h3>A propos de nous</h3>
+            <h5>RobotWithMe, l'entreprise qui facilite votre vie dans la création de robots</h5>
+            <p>Depuis 10 ans, nous nous efforcons de créer de véritables appareils qui vous facilite le quotidien. De la domotique au appareil pour les handicapés, nous ne cessons de redoubler d'effort pour vous donner le meilleur</p>
+        </div>
 
-					<div class="col">
-						<h3>We’re Hiring</h3>
-						<img src="css/images/col-img.png" alt="" class="left"/>
-						<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h5>
-						<div class="cl">&nbsp;</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui ipsum, cursus ut adipiscing porta, vestibulum quis turpis adispicing amet sit. <br /><a href="#" class="more">view more</a></p>
-					</div>
+        <div class="col">
+            <h3>Nos sponsors</h3>
+            <img src="assets/images/sponsors/iRobot_Roomba_logo.gif" alt="" class="image-index"/>
+            <img src="assets/images/sponsors/robot_start_pme_logo_1.jpg" alt="" class="image-index"/>
+        </div>
 
-					<div class="col">
-						<h3>Our Services</h3>
-						<ul>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Sit atmet, consectetur lorem </a></li>
-							<li><a href="#">Consectetur adispicing dolor</a></li>
-							<li><a href="#">Lipsuim dolor amet adpispicing</a></li>
-							<li><a href="#">Lipsuim dolor amet adpispicing</a></li>
-						</ul>
-					</div>
-					<div class="cl">&nbsp;</div>
-				</section>
+        <div class="col">
+            <h3>Nous contacter</h3>
+            <ul>
+                <address>
+                    RobotWithMe<br>
+                    Boulevard du Robot <br>
+                    10101, iRobot, R2D2, Pandora<br>
+                    Tél: 0039 333 12 68 347 <br>
+                </address>
+            </ul>
+        </div>
+        <div class="cl">&nbsp;</div>
+    </section>
 
 </div>
 

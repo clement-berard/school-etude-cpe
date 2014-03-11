@@ -12,9 +12,13 @@ $(document).ready(function() {
      * 
      */
     $('.add_to_cart').click(function() {
-
         var id_product = $(this).data('idproduct');
         addToCart(id_product);
+    });
+
+    $('.cart_delete_item').click(function() {
+        var id_product = $(this).data('id');
+        deleteItem(id_product);
     });
 });
 
@@ -29,14 +33,35 @@ $(document).ready(function() {
 function addToCart(id_product) {
     $.ajax({
         type: "POST",
-        dataType: 'text',
-        data : {id : id_product},
+        dataType: 'json',
+        data: {id: id_product},
         url: "add_to_cart.php",
         beforeSend: function(xhr) {
-            
+
         }
     })
             .done(function(data) {
-                   alert(data);
+                refreshNbCart(data.nb_product_cart);
+                alert(data.message);
             });
 }
+
+/**
+ * 
+ */
+function deleteItem(id_product) {
+    if(confirm("Voulez-vous vraiment supprimer ce produit de votre panier ?")){
+        
+    }
+        
+}
+
+/**
+ * 
+ * @param {type} number
+ * @returns {undefined}
+ */
+function refreshNbCart(number) {
+    $('#number_product_cart').html(number);
+}
+

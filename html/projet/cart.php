@@ -8,13 +8,13 @@
         <h3>Votre panier</h3>
         <?php
         // on recupère tous les éléments du panier
-        $all_cart = $session->get('cart');
+        $all_cart = $cart->get('cart');
 //        echo "<pre>";
-//        print_r($all_cart);
+//        print_r($all_cart);die;
         ?>
 
         <?php if (!empty($all_cart)) { ?>
-            <table cellspacing='0'>
+            <table>
                 <thead>
                     <tr>
                         <th></th>
@@ -27,11 +27,11 @@
                 <tbody>
                     <?php foreach ($all_cart as $key => $value): ?>
                         <tr>
-                            <td><img style="width: 25px;height: 25px" src="data:image/gif;base64,<?php echo $value['imgbase64'] ?>" /></td>
+                            <td><img alt="<?php echo $value['title'] ?>" src="data:image/gif;base64,<?php echo $value['imgbase64'] ?>" /></td>
                             <td><?php echo $value['title'] ?></td>
-                            <td><?php echo $value['price'] ?></td>
-                            <td><?php echo $value['id'] ?></td>
-                            <td><button>Supprimer</button></td>
+                            <td><?php echo (isset($value['nbcart'])) ? $value['nbcart']*$value['price'] : $value['price'] ?></td>
+                            <td><?php echo (isset($value['nbcart'])) ? $value['nbcart'] : 1 ?></td>
+                            <td><button class="cart_delete_item" data-id="<?php echo $value['id'] ?>">Supprimer</button></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
