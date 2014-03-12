@@ -8,7 +8,7 @@ $id = $_POST['id'];
 if (!$id || !$model_product->exist('id = ' . $id))
     header('Location: erreur.php');
 // on delete du panier
-$cart->removeOneItem($id);
+$cart->removeItem($id);
 // nombre de produit dans le panier
 $nb_product_in_cart = sizeof($cart->get('cart'));
 // on renvoit du texte

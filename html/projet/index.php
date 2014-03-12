@@ -1,5 +1,8 @@
-<?php include_once 'layout/header.php'; ?>
-<?php include_once('layout/slider.php'); ?>
+<?php
+include_once 'layout/header.php';
+include_once('layout/slider.php');
+$page_name = "index";
+?>
 <div class="main">
     <section class="cols">
         <div class="col">

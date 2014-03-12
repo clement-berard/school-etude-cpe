@@ -13,6 +13,7 @@
 </div>
 <!-- end of shell -->
 </div>
+<script type="text/javascript"><?php if ($page_name) echo "changeActiveMenu('" . $page_name . "');"; ?></script>
 <!-- end of wrapper -->
 </body>
 </html>

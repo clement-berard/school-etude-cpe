@@ -1,7 +1,7 @@
 /*
 Feuille de style pour le panier (cart.php)
 */
-/* 
+/*
     Created on : 10 mars 2014, 09:39:47
     Author     : Clément BERARD
 */
@@ -94,7 +94,7 @@ Feuille de style pour le panier (cart.php)
 #page_cart > table tr:hover td {
     background: #f2f2f2;
     background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-    background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+    background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
 }
 
 #page_cart >  #contain_valid_button{
@@ -111,4 +111,8 @@ Feuille de style pour le panier (cart.php)
 #page_cart >  #contain_valid_button >.cart_btn_validate:hover{
     border-color: #000;
     cursor: pointer;
+}
+
+#page_cart > #empty_cart_div.cachee{
+    display: none;
 }

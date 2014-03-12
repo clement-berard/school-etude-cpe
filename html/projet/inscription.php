@@ -1,4 +1,7 @@
-<?php include_once 'layout/header.php'; ?>
+<?php
+include_once 'layout/header.php';
+$page_name = "inscription";
+?>
 
 
 
@@ -29,7 +32,7 @@ if ($aDuPost) {
                 <input id="firstname" name="firstname" minlength="2" type="text" required/>
                 <label for="lastname">Nom</label>
                 <input id="lastname" name="lastname" minlength="2" type="text" required/>
-             
+
                 <label for="age">Age</label>
                 <select id="age" name="age" required>
                     <?php

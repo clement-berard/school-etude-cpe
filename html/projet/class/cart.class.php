@@ -73,7 +73,7 @@ class cart {
      * @param type $id_item
      */
     public function removeOneItem($id_item = null) {
-        if ($item != null) {
+        if ($id_item != null) {
             $tps = $this->session->get('cart');
             if (!empty($tps)) {
                 foreach ($tps as $key => $value) {

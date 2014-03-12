@@ -40,13 +40,10 @@ $(document).ready(function() {
         else {
             var uniqueprice = $(this).data('uniqueprice');
             var olderstock = $(this).data('olderstock');
-            if(olderstock < value)
+            if (olderstock < value)
                 addToCart(id_product, false);
             else
                 deleteOneQuantityItem(id_product);
-
-
-
             $("#td_cart_item_no_" + id_product).html(value * uniqueprice);
         }
 
@@ -85,7 +82,20 @@ function addToCart(id_product, alerte) {
  */
 function deleteItem(id_product) {
     if (confirm("Voulez-vous vraiment supprimer ce produit de votre panier ?")) {
-        return true;
+        $.ajax({
+            type: "POST",
+            dataType: 'json',
+            data: {id: id_product},
+            url: "remove_entiere_item_from_cart.php",
+            beforeSend: function(xhr) {
+
+            }
+        })
+                .done(function(data) {
+                    $("#tr_cart_item_no_" + id_product).fadeOut('fast').remove();
+                    refreshNbCart(data.nb_product_cart);
+                    noMoreItem();
+                });
     }
     else {
         return false;
@@ -93,20 +103,23 @@ function deleteItem(id_product) {
 
 }
 
- function deleteOneQuantityItem(id_product){
-     $.ajax({
+/**
+ * Fonction qui supprime juste UNE quantité d'un produit
+ * @param {type} id_product
+ * @returns {undefined}
+ */
+function deleteOneQuantityItem(id_product) {
+    $.ajax({
         type: "POST",
         dataType: 'json',
         data: {id: id_product},
-        url: "add_to_cart.php",
+        url: "remove_one_item_cart.php",
         beforeSend: function(xhr) {
 
         }
     })
             .done(function(data) {
                 refreshNbCart(data.nb_product_cart);
-                if (alerte)
-                    alert(data.message);
             });
 }
 
@@ -118,5 +131,22 @@ function deleteItem(id_product) {
  */
 function refreshNbCart(number) {
     $('#number_product_cart').html(number);
+}
+
+/**
+ * Supprimer le tableau du panier si il ne reste plus
+ * d'articles de le panier
+ * @returns {undefined}
+ */
+function noMoreItem(){
+    var rowCount = $('#table_cart >tbody >tr').length;
+    var tableau = $('#table_cart');
+    var noItemDiv = $('#empty_cart_div');
+    var validateCartButton = $('#contain_valid_button');
+    if(rowCount == 0){
+        tableau.hide();
+        validateCartButton.hide();
+        noItemDiv.removeClass('cachee');
+    }
 }
 

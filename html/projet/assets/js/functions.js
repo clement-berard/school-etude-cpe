@@ -1,3 +1,11 @@
+/**
+ *
+ * Ce fichier correspond au template utilisé
+ *
+ * Seulement des petites modifications ont été apportée
+ * pour le slider (fonction carosel)
+ */
+
 var sliderDuration = 1000;
 
 $(function() {
@@ -25,7 +33,7 @@ $(function() {
 	$('#thumbs a:visible:first').addClass('selected');
 });
 
-$(window).load(function(){ 
+$(window).load(function(){
 
 	//slider thumb
 	$('.slider ul').carouFredSel({
@@ -62,7 +70,7 @@ $(window).load(function(){
 		infinite: true,
 		prev: '#prev',
 		next: '#next'
-	});	
+	});
 
 	$('#thumbs a').click(function() {
 		$('.slider ul').trigger('slideTo', '#' +this.href.split('#').pop());
@@ -73,7 +81,7 @@ $(window).load(function(){
 
 });
 
-$(window).resize(function() { 
+$(window).resize(function() {
 	carosel();
 })
 
