@@ -69,6 +69,25 @@ class cart {
     }
 
     /**
+     *
+     * @param type $id_item
+     */
+    public function removeOneItem($id_item = null) {
+        if ($item != null) {
+            $tps = $this->session->get('cart');
+            if (!empty($tps)) {
+                foreach ($tps as $key => $value) {
+                    if ($value['id'] == $id_item) {
+                        $tps[$key]['nbcart'] = $tps[$key]['nbcart'] - 1;
+                    }
+                }
+
+            }
+            $this->session->add("cart", $tps);
+        }
+    }
+
+    /**
      * vider tout le panier
      */
     public function clearAll() {
