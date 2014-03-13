@@ -16,7 +16,7 @@ $page_name = "cart";
 //        echo "<pre>";
 //        print_r($all_cart);die;
         ?>
-
+        <a href="#" id="clearAllCartLink">Vider le panier</a>
         <?php if (!empty($all_cart)) { ?>
             <table id="table_cart">
                 <thead>
@@ -39,7 +39,7 @@ $page_name = "cart";
                             <td><?php echo $value['title'] ?></td>
                             <td id="td_cart_item_no_<?php echo $value['id'] ?>"><?php echo $prixActuel ?></td>
                             <td><input type="number" class="cart_number_of_item" data-id="<?php echo $value['id'] ?>" data-olderstock="<?php echo $stockActuel ?>" data-uniqueprice="<?php echo $value['price'] ?>" value="<?php echo $stockActuel ?>" /></td>
-                            <td><a href="#" class="cart_delete_item" data-id="<?php echo $value['id'] ?>">Supprimer</a></td>
+                            <td><a href="#" class="cart_delete_item" data-number="<?php echo $stockActuel ?>" data-id="<?php echo $value['id'] ?>">Supprimer</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

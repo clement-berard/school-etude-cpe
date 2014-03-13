@@ -94,13 +94,22 @@ class bdd {
         return current($this->select($table, $fields, 'id = ' . $id));
     }
 
-    public function insert($table = null){
-
+    /**
+     *
+     * @param type $table
+     * @param type $fields
+     * @param type $id
+     */
+    public function update($table = null,$fields = array(),$id = null){
+        $req = "";
+        $req .= "UPDATE ".$table." ";
+        $req .= "SET ";
+        foreach ($fields as $key => $value) {
+            $req .= $key." = ".$value.",";
+        }
+        $req = substr($req, 0, -1);
+        $req .= " WHERE id=".$id.";";
+        $this->exec($req);
     }
 
 }
-
-/**
- * /lib
- * /lib/private
- */

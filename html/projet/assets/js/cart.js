@@ -17,12 +17,17 @@ $(document).ready(function() {
         addToCart(id_product);
     });
 
+    $('#clearAllCartLink').click(function() {
+        clearCart();
+    });
+
     /**
      * Action pour supprimer un élément du panier
      */
     $('.cart_delete_item').click(function() {
         var id_product = $(this).data('id');
-        deleteItem(id_product);
+        var number = $(this).parent('td').parent('tr').find('.cart_number_of_item');
+        deleteItem(id_product, number.val());
     });
 
     /**
@@ -32,18 +37,20 @@ $(document).ready(function() {
     $('.cart_number_of_item').change(function() {
         var id_product = $(this).data('id');
         var value = $(this).val();
-
         if (value == 0) {
-            if (!deleteItem(id_product))
+            if (!deleteItem(id_product, value))
                 $(this).val(1);
         }
         else {
             var uniqueprice = $(this).data('uniqueprice');
             var olderstock = $(this).data('olderstock');
-            if (olderstock < value)
+            if (olderstock < value) {
                 addToCart(id_product, false);
-            else
+            }
+            else {
                 deleteOneQuantityItem(id_product);
+            }
+
             $("#td_cart_item_no_" + id_product).html(value * uniqueprice);
         }
 
@@ -65,13 +72,14 @@ function addToCart(id_product, alerte) {
         type: "POST",
         dataType: 'json',
         data: {id: id_product},
-        url: "add_to_cart.php",
+        url: "ajaxHandler.php?action=addToCart",
         beforeSend: function(xhr) {
 
         }
     })
             .done(function(data) {
                 refreshNbCart(data.nb_product_cart);
+                $('#product_quantity_' + id_product).html(data.quantity);
                 if (alerte)
                     alert(data.message);
             });
@@ -80,13 +88,13 @@ function addToCart(id_product, alerte) {
 /**
  *
  */
-function deleteItem(id_product) {
+function deleteItem(id_product, num) {
     if (confirm("Voulez-vous vraiment supprimer ce produit de votre panier ?")) {
         $.ajax({
             type: "POST",
             dataType: 'json',
-            data: {id: id_product},
-            url: "remove_entiere_item_from_cart.php",
+            data: {id: id_product, number: num},
+            url: "ajaxHandler.php?action=deleteItem",
             beforeSend: function(xhr) {
 
             }
@@ -113,7 +121,7 @@ function deleteOneQuantityItem(id_product) {
         type: "POST",
         dataType: 'json',
         data: {id: id_product},
-        url: "remove_one_item_cart.php",
+        url: "ajaxHandler.php?action=deleteOneQuantityItem",
         beforeSend: function(xhr) {
 
         }
@@ -138,15 +146,34 @@ function refreshNbCart(number) {
  * d'articles de le panier
  * @returns {undefined}
  */
-function noMoreItem(){
+function noMoreItem() {
     var rowCount = $('#table_cart >tbody >tr').length;
     var tableau = $('#table_cart');
     var noItemDiv = $('#empty_cart_div');
     var validateCartButton = $('#contain_valid_button');
-    if(rowCount == 0){
+    if (rowCount == 0) {
         tableau.hide();
         validateCartButton.hide();
         noItemDiv.removeClass('cachee');
     }
+}
+
+/**
+ *
+ * @returns {undefined}
+ */
+function clearCart() {
+    $.ajax({
+        type: "POST",
+        dataType: 'json',
+        url: "ajaxHandler.php?action=clearAllCart",
+        beforeSend: function(xhr) {
+
+        }
+    })
+            .done(function(data) {
+                alert(data.message);
+                noMoreItem();
+            });
 }
 

@@ -2,12 +2,12 @@
 // initialisation du chemin des images :
 $images_slider = array(
     "1" => array(
-        "url" => "assets/images/slider/robot.png",
+        "url" => "assets/images/slider/robotic_pet.png",
         'title' => "Haute qualité",
         'description' => "Nous garentissons des produits d'une qualité execptionnelle, resistants, surprenant !"
     ),
     "2" => array(
-        "url" => "assets/images/slider/robotic_pet.png",
+        "url" => "assets/images/slider/robot.png",
         'title' => "Pour toutes les utilisations !",
         'description' => "La diversité de nos produits sont des meilleurs. Avec nous, chacun de vos problèmes trouvent une solution"
     ),

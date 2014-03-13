@@ -81,7 +81,6 @@ class cart {
                         $tps[$key]['nbcart'] = $tps[$key]['nbcart'] - 1;
                     }
                 }
-
             }
             $this->session->add("cart", $tps);
         }

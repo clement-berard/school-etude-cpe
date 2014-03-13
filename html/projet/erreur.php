@@ -1,7 +1,7 @@
 <?php
 include_once 'layout/header.php';
 ?>
- <div class="portfolio portfolio-page container">
+<div class="portfolio portfolio-page container">
 
     <div class="row">
         <div class="alert alert-error">
@@ -11,11 +11,4 @@ include_once 'layout/header.php';
 
 
 </div>
-
-<script type="text/javascript">
-
-
-
-</script>
-
 <?php include_once 'layout/footer.php'; ?>

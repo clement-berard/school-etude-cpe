@@ -1,7 +1,7 @@
 /*
 Feuille de style pour les produits (products.php)
 */
-/* 
+/*
     Created on : 10 mars 2014, 09:39:47
     Author     : Clément BERARD
 */
@@ -9,7 +9,7 @@ Feuille de style pour les produits (products.php)
 
 #page_products .item_product{
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 20%;
 }
 
 #page_products > .item_product > .image img{
@@ -17,21 +17,42 @@ Feuille de style pour les produits (products.php)
 }
 
 #page_products > .item_product > .image{
-    width: 25%; float: left;
+    float: left;
+    display: inline;
+    clear: both;
+}
+
+#page_products > .item_product > .image img{
+    height: 237px
 }
 
 #page_products > .item_product > .infos{
-    margin-left: 25%; width: 75%;
+ float: left;
+    display: inline;
+    width: 50%;
+    margin-left: 0%;
+
 }
+
+#page_products > .item_product > .qandp{
+ float: left;
+
+}
+
 
 #page_products > .item_product > .infos a{
     border-bottom: 1px dotted #FFF;
 }
 
-#page_products > .item_product > .infos .page_product_price{
-    float: right;
-    font-size: 16px;
-    color: #000;
+#page_products > .item_product >  .qandp > .page_product_price{
+    margin-top: 50px;
+    border: 1px solid black;
+    margin-left: 20px;
+
+}
+
+#page_products > .item_product >  .qandp > .page_product_quantity{
+ border: 1px solid black;
 }
 
 #page_products > .item_product > .infos a:hover{

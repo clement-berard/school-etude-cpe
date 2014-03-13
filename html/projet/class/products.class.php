@@ -26,76 +26,28 @@ class products extends parents {
      * @param type $id
      */
     public function selectById($id = null) {
-        return $this->db->selectById($this->useTable, $this->allFields,$id);
+        $e = $this->db->selectById($this->useTable, $this->allFields,$id);
+        $this->id = $id;
+        $this->number = $e['number'];
+        return $e;
     }
 
     /**
      *
-     * @return type
+     * @param type $quantity
      */
-    public function getId() {
-        return $this->id;
-    }
-
-    /**
-     *
-     * @return type
-     */
-    public function getImagebase64() {
-        return $this->imagebase64;
-    }
-
-    /**
-     *
-     * @return type
-     */
-    public function getTitle() {
-        return $this->title;
-    }
-
-    /**
-     *
-     * @return type
-     */
-    public function getDescription() {
-        return $this->description;
-    }
-
-    public function getPrice() {
-        return $this->price;
+    public function updateQuantity($quantity = null){
+        if(!is_null($quantity)){
+            $this->db->update($this->useTable,array('number' => $quantity),  $this->id);
+            $this->number = $quantity;
+        }
     }
 
     public function getNumber() {
         return $this->number;
     }
 
-    public function setId($id) {
-        $this->id = $id;
-    }
 
-    public function setImagebase64($imagebase64) {
-        $this->imagebase64 = $imagebase64;
-    }
-
-    public function setTitle($title) {
-        $this->title = $title;
-    }
-
-    public function setDescription($description) {
-        $this->description = $description;
-    }
-
-    public function setPrice($price) {
-        $this->price = $price;
-    }
-
-    /**
-     *
-     * @param type $number
-     */
-    public function setNumber($number) {
-        $this->number = $number;
-    }
 
 }
 

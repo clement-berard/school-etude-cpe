@@ -6,7 +6,7 @@
  * pour le slider (fonction carosel)
  */
 
-var sliderDuration = 1000;
+var sliderDuration = 300;
 
 $(function() {
 
