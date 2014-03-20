@@ -1,0 +1,12 @@
+#contact{
+    text-align: center;
+}
+#contact .coordonnee{
+    font-family: serif;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+div#contact div#formulaire input{
+    margin-bottom: 10px;
+}

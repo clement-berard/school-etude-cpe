@@ -1,0 +1,87 @@
+html,body{
+    margin: 0 auto;
+    width: 900px;
+background-image: -o-linear-gradient(bottom, #A1A1A1 0%, #FAFAFA 100%);
+background-image: -moz-linear-gradient(bottom, #A1A1A1 0%, #FAFAFA 100%);
+background-image: -webkit-linear-gradient(bottom, #A1A1A1 0%, #FAFAFA 100%);
+background-image: -ms-linear-gradient(bottom, #A1A1A1 0%, #FAFAFA 100%);
+background-image: linear-gradient(to bottom, #A1A1A1 0%, #FAFAFA 100%);
+}
+
+
+#entete{
+    min-height: 100px;
+    margin-top: 30px;
+}
+#entete > #name{
+    float: left;
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px #000000;
+
+}
+#entete > #menu{
+    float: right;
+    margin-top: -5px;
+}
+div#entete div#menu ul#lemenu li{
+    list-style: none;
+    display: inline;
+    margin-right: 5px;
+
+}
+
+div#entete div#menu ul#lemenu li a{
+    text-decoration: none;
+    color: grey;
+    border: 1px solid grey;
+    padding: 5px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+div#entete div#menu ul#lemenu li a:hover,div#entete div#menu ul#lemenu li a.active{
+    color: black;
+    border-color: black;
+}
+#content{
+    border: 1px solid grey;
+    min-height: 400px;
+    padding: 20px;
+    background-color: #FFF;
+}
+
+#content #index{text-align: center;}
+
+#piedepage{
+    text-align: center;
+}
+
+#piedepage #copyright{
+    color: grey;
+}
+
+.competenses{text-align: center;}
+.competenses ul li{
+    list-style: square;
+}
+
+#contact{
+    text-align: center;
+}
+#contact .coordonnee{
+    font-family: serif;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+div#contact div#formulaire input{
+    margin-bottom: 10px;
+}
+
+.experiences{text-align: center}
+.experiences .item{margin-bottom: 10px;}
+.experiences .item .date{font-style: italic;color: grey;}
+.experiences .item .intitule{font-weight: bold;margin-left: 15px;}
+.experiences .item .poste{margin-left: 15px;}

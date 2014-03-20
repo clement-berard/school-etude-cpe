@@ -1,0 +1,5 @@
+.competenses{text-align: center;}
+.competenses ul li{
+    list-style: square;
+    alignment-adjust: auto;
+}

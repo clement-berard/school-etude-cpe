@@ -1,0 +1,5 @@
+.experiences{text-align: center}
+.experiences .item{margin-bottom: 10px;}
+.experiences .item .date{font-style: italic;color: grey;}
+.experiences .item .intitule{font-weight: bold;margin-left: 15px;}
+.experiences .item .poste{margin-left: 15px;}
