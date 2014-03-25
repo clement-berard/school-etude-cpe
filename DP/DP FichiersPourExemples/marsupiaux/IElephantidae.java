@@ -6,4 +6,9 @@
 
 public interface IElephantidae extends IAnimal {
 
+	
+	public String toString ();
+	
+	
+	
 }
