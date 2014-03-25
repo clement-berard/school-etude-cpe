@@ -1,8 +1,12 @@
 public class TreeSleeperAdapterMammouth implements ITreeSleeper {
 
+	
+	private IElephantidae e;
+	
+	
 	public TreeSleeperAdapterMammouth(IElephantidae e) {
 		super();
-		e.toString();
+		this.e = e;
 
 	}
 
@@ -64,7 +68,7 @@ public class TreeSleeperAdapterMammouth implements ITreeSleeper {
 
 	@Override
 	public String toString() {
-		return "Je suis un Elephantide, et je peux dormir dans les arbres";
+		return "Je suis un Elephantide "+e.getName()+", et je peux dormir dans les arbres";
 	}
 	
 	
