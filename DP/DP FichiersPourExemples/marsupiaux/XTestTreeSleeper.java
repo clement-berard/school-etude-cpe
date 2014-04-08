@@ -9,6 +9,11 @@ public class XTestTreeSleeper {
 
 	public static void main(String[] args) {
 
+		
+		Home home = new Home();
+		
+		
+		
 //		Mammouth m = new Mammouth("Ellie");
 //		TreeSleeperAdapterMammouth e = new TreeSleeperAdapterMammouth(m);
 //		System.out.println(m.toString());
@@ -19,31 +24,35 @@ public class XTestTreeSleeper {
 //		 réveil et à l'endormissement
 		 Observer Vue = new TreeSleeperVueConsole();
 		
-		 // création des objets TreeSleeper
-//		 IObservable opossum =
-//		 (IObservable) new TreeSleeperDecorateObservable(
-//		 new Opossum("Crash"), new SujetObservable());
+//		  création des objets TreeSleeper
+		 TreeSleeperDecorateObservable opossum =
+		 (TreeSleeperDecorateObservable) new TreeSleeperDecorateObservable(
+		 new Opossum("Crash"), new SujetObservable());
 		
-		 IObservable mammouthAdapte =
-		 (IObservable) new TreeSleeperDecorateObservable (
-		 new TreeSleeperAdapterMammouth(new Mammouth("Ellie")),
-		 new SujetObservable());
+//		 IObservable mammouthAdapte =
+//		 (IObservable) new TreeSleeperDecorateObservable (
+//		 new TreeSleeperAdapterMammouth(new Mammouth("Ellie")),
+//		 new SujetObservable());
 		
 		 
-		 mammouthAdapte.toString();
+//		 mammouthAdapte.toString();
 		
-//		 // écoute du TreeSleeper
-//		 opossum.addObserver(Vue);
+		 // écoute du TreeSleeper
+		 opossum.addObserver(Vue);
 //		 mammouthAdapte.addObserver(Vue);
-//		
+
 //		 // simulation de l'écoute des évènements liés au réveil et à
 ////		 l'endormissement
 //		 System.out.println("\n\tSimulerEndormissement\n");
-//		 simulerEndormissement((ITreeSleeper)opossum);
+		 simulerEndormissement((ITreeSleeper)opossum);
+		 
+		 System.out.println(opossum.getSleepState());
 //		 simulerEndormissement((ITreeSleeper)mammouthAdapte);
 //		 System.out.println("\n\tSimulerRéveil\n");
-//		 simulerReveil((ITreeSleeper)opossum);
-//		 simulerReveil((ITreeSleeper)mammouthAdapte);
+		 simulerReveil((ITreeSleeper)opossum);
+		 
+		 System.out.println(opossum.getSleepState());
+//	 simulerReveil((ITreeSleeper)mammouthAdapte);
 
 	}
 

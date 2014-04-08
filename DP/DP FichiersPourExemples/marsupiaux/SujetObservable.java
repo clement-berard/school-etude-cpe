@@ -8,7 +8,8 @@ import java.util.Observable;
 
 public class SujetObservable extends Observable {
 	public void notifyObservers(Object o) {	
-		super.notifyObservers(o); 
+		System.out.println("notifyObservers - SujetObservable");
+		super.notifyObservers(o);
 		setChanged();
 	}	
 }
